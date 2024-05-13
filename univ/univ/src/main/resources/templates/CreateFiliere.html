@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de Filière</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('hd.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        main {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Création de Filière</h1>
+</header>
+<main>
+    <form th:action="#" method="post">
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" th:required="required">
+        </div>
+        <div>
+            <label for="nombreEtudiants">Nombre d'Étudiants :</label>
+            <input type="text" id="nombreEtudiants" name="nombreEtudiants" th:required="required">
+        </div>
+        <div>
+            <label for="nombreEnseignants">Nombre d'Enseignants :</label>
+            <input type="text" id="nombreEnseignants" name="nombreEnseignants" th:required="required">
+        </div>
+        <div>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</main>
+<footer>
+    <a href="filiereList.html">Liste des Filières</a>
+</footer>
+</body>
+</html>

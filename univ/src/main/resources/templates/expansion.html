@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Expansion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40; /* Dark grey */
+        }
+        p {
+            text-align: center;
+            color: #6c757d; /* Medium grey */
+            margin-top: 20px;
+        }
+        /* Additional styles for Campus Expansion page */
+        .jumbotron {
+            background-color: #343a40; /* Dark grey */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #fff; /* White */
+        }
+        .jumbotron p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .jumbotron .btn {
+            background-color: #007bff; /* Blue */
+            color: #fff; /* White */
+            border-color: #007bff; /* Blue */
+            font-weight: bold;
+        }
+        .jumbotron .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .testimonial {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f1f1f1; /* Light grey */
+            border-radius: 10px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .map-container {
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .event {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f1f1f1; /* Light grey */
+            border-radius: 10px;
+        }
+        .event h3 {
+            color: #007bff; /* Blue */
+        }
+        .event p {
+            color: #6c757d; /* Medium grey */
+        }
+        .contact-form {
+            margin-bottom: 30px;
+        }
+        .social-links {
+            margin-bottom: 30px;
+        }
+        .social-links a {
+            margin-right: 10px;
+            color: #007bff; /* Blue */
+        }
+        .blog-section {
+            margin-bottom: 30px;
+        }
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f1f1f1; /* Light grey */
+            border-radius: 10px;
+        }
+        .blog-post h4 {
+            color: #007bff; /* Blue */
+        }
+        .blog-post p {
+            color: #6c757d; /* Medium grey */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/homepage}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="jumbotron">
+    <h1>Campus Expansion</h1>
+    <p>Learn about our plans to expand our campus facilities to accommodate more students.</p>
+    <a href="#" class="btn btn-primary btn-lg">Read More</a>
+</div>
+
+<div class="container">
+
+    <div class="container">
+        <h2>About the Expansion Project</h2>
+        <p>Our university is embarking on an ambitious journey of growth and development with the Expansion Project. Designed to meet the evolving needs of our student body and academic community, this project represents a significant investment in our future.</p>
+        <p><strong>Vision</strong><br>The vision behind the Expansion Project is to create a campus environment that fosters innovation, collaboration, and excellence in education. By expanding our facilities, we aim to provide state-of-the-art resources and modern learning spaces that inspire creativity and drive academic achievement.</p>
+        <p><strong>Objectives</strong></p>
+        <ul>
+            <li><strong>Increased Capacity:</strong> With the growing demand for higher education, our primary objective is to expand our campus infrastructure to accommodate more students comfortably.</li>
+            <li><strong>Enhanced Facilities:</strong> The Expansion Project includes the construction of new buildings and the renovation of existing ones to provide cutting-edge facilities such as advanced laboratories, research centers, and student amenities.</li>
+            <li><strong>Community Engagement:</strong> We are committed to engaging with the local community throughout the expansion process, seeking feedback, and ensuring that our development aligns with the needs and aspirations of the broader community.</li>
+        </ul>
+        <p><strong>Sustainability</strong><br>In line with our commitment to sustainability, the Expansion Project integrates environmentally friendly practices and technologies. From energy-efficient buildings to green spaces and renewable energy sources, sustainability is a core principle guiding our development efforts.</p>
+        <p><strong>Timeline</strong><br>The Expansion Project is a multi-phase initiative with a carefully planned timeline. While some aspects of the project are already underway, others are in the planning and design stages. We are dedicated to ensuring that each phase is executed efficiently and with minimal disruption to campus operations.</p>
+        <p><strong>Impact</strong><br>The impact of the Expansion Project extends far beyond our campus boundaries. By creating a vibrant and inclusive learning environment, we aim to empower students, faculty, and staff to reach their full potential and make meaningful contributions to society.</p>
+        <p><strong>Get Involved</strong><br>As we embark on this exciting journey, we invite all members of our university community to join us in shaping the future of our institution. Whether through participation in planning committees, volunteer opportunities, or simply sharing your ideas and feedback, your involvement is invaluable.</p>
+
+    </div>
+        <div class="testimonial">
+        <h3>What Our Students Say</h3>
+        <p>"My experience at My University has been incredible. The expansion plans are exciting, and I can't wait to see the campus grow!"</p>
+        <p>- John Doe, Computer Science Student</p>
+    </div>
+
+    <div class="map-container">
+        <!-- Embedded Google Map -->
+        <!-- Replace the iframe src attribute with your own Google Maps embed code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12973567.554356214!2d-10.57983266974888!3d31.508414815085855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdad4d347bd4f8a5%3A0x59a62a4e90f26a49!2sMorocco!5e0!3m2!1sen!2sma!4v1645221692948!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="gallery">
+        <img src="img1.jpg" alt="Campus Image 1">
+        <img src="img2.jpeg" alt="Campus Image 2">
+        <img src="img3.jpg" alt="Campus Image 3">
+        <img src="img4.png" alt="Campus Image 4">
+    </div>
+
+    <div class="event">
+        <h3>Upcoming Events</h3>
+        <div class="event-details">
+            <p><strong>Event 1:</strong> Description: Join us for our annual Student Career Fair, where students can explore internship and job opportunities with leading companies in various industries. Network with recruiters, attend workshops, and polish your resume for success!</p>
+            <p><strong>Date:</strong> January 15, 2025</p>
+        </div>
+        <div class="event-details">
+            <p><strong>Event 2:</strong> Description: Our Research Symposium showcases the latest innovations and discoveries across diverse fields of study. Hear from faculty researchers, attend poster presentations, and engage in discussions on cutting-edge research topics..</p>
+            <p><strong>Date:</strong> February 28, 2025</p>
+        </div>
+        <div class="event-details">
+            <p><strong>Event 3:</strong>Description: Give back to the community by participating in our Community Service Day. Join fellow students, faculty, and staff in volunteering for local nonprofits, organizing donation drives, and supporting community initiatives.</p>
+            <p><strong>Date:</strong> March 20, 2025</p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h3>Contact Us</h3>
+        <form id="contact-form" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="button" id="submit-btn" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="social-links">
+        <h3>Connect With Us</h3>
+        <a href="#" class="btn btn-primary"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="btn btn-danger"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+
+    <div class="blog-section">
+        <h3>Latest Blog Posts</h3>
+        <div class="blog-post">
+            <h4>Post Title 1</h4>
+            <h4>The Impact of Artificial Intelligence on Education</h4>
+            <p>Artificial Intelligence (AI) is revolutionizing various sectors, and education is no exception. This post explores the profound impact of AI on education, from personalized learning experiences to automated grading systems.</p>
+        </div>
+        <div class="blog-post">
+            <h4>Post Title 2</h4>
+            <p>   <h4>Exploring Sustainable Practices in Architecture</h4>
+            <p>This post delves into the world of sustainable architecture, examining innovative design principles, eco-friendly materials, and the role of architects in creating environmentally conscious buildings for a greener future.</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer" style="padding: 5px 0;">
+    <div class="container">
+        <p style="font-size: 12px;">&copy; 2024 My University. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("submit-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            submitForm();
+        }
+    });
+
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+            alert("Please fill in all fields.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function submitForm() {
+        var formData = new FormData(document.getElementById("contact-form"));
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "submit.php"); // Replace "submit.php" with your backend endpoint
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Message sent successfully!");
+                    document.getElementById("contact-form").reset();
+                } else {
+                    alert("Error: " + xhr.status);
+                }
+            }
+        };
+        xhr.send(formData);
+    }
+</script>
+</body>
+</html>

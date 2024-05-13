@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Programs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40; /* Dark grey */
+        }
+        p {
+            text-align: center;
+            color: #6c757d; /* Medium grey */
+            margin-top: 20px;
+        }
+        .navbar {
+            background-color: #343a40; /* Dark grey */
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #555; /* Darker grey on hover */
+        }
+        .program {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f1f1f1; /* Light grey */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        .program:hover {
+            transform: translateY(-5px);
+        }
+        .program h2 {
+            color: #343a40; /* Dark grey */
+        }
+        .program p {
+            color: #6c757d; /* Medium grey */
+        }
+        .footer {
+            background-color: #343a40; /* Dark grey */
+            color: #fff; /* White */
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-top: auto;
+            width: 100%;
+        }
+        .btn-home, .btn-enroll {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .btn-home:hover, .btn-enroll:hover {
+            background-color: #0056b3;
+        }
+        .enrolled, .enrolled:hover {
+            background-color: #ffc107; /* Yellow */
+            color: #343a40; /* Dark grey */
+        }
+        .share-icons {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            display: flex;
+            gap: 5px;
+        }
+        .share-icons a {
+            color: #343a40; /* Dark grey */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .share-icons a:hover {
+            color: #007bff; /* Blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <!-- Replace @{} with your actual URL mapping for the homepage -->
+        <a class="btn-home" th:href="@{/}">Home</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>New Programs</h1>
+    <p>Explore our latest academic offerings designed to shape your future.</p>
+
+    <div class="program">
+        <h2>Data Science Program</h2>
+        <p>Learn the art of extracting insights from data and gain valuable skills for today's data-driven world.</p>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+
+    <div class="program">
+        <h2>Web Development Bootcamp</h2>
+        <p>Master the fundamentals of web development and build dynamic, responsive websites from scratch.</p>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+
+    <div class="program">
+        <h2>Digital Marketing Certification</h2>
+        <p>Explore the strategies and tools used in digital marketing and become proficient in online advertising and promotion.</p>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 University. All rights reserved.</p>
+</footer>
+
+<script>
+    function enroll(button) {
+        button.textContent = 'Enrolled';
+        button.disabled = true;
+        alert('You have successfully enrolled in the program!');
+    }
+</script>
+</body>
+</html>

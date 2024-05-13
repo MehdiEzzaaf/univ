@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Exciting Programs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40; /* Dark grey */
+        }
+        p {
+            text-align: center;
+            color: #6c757d; /* Medium grey */
+            margin-top: 20px;
+        }
+        .navbar {
+            background-color: #343a40; /* Dark grey */
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #555; /* Darker grey on hover */
+        }
+        .program {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f1f1f1; /* Light grey */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        .program:hover {
+            transform: translateY(-5px);
+        }
+        .program h2 {
+            color: #343a40; /* Dark grey */
+        }
+        .program p {
+            color: #6c757d; /* Medium grey */
+        }
+        .footer {
+            background-color: #343a40; /* Dark grey */
+            color: #fff; /* White */
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-top: auto;
+            width: 100%;
+        }
+        .btn-home {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn-home:hover {
+            background-color: #0056b3;
+        }
+        .btn-enroll, .btn-enroll:hover {
+            background-color: #28a745; /* Green */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .enrolled, .enrolled:hover {
+            background-color: #ffc107; /* Yellow */
+            color: #343a40; /* Dark grey */
+        }
+        .share-icons {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            display: flex;
+            gap: 5px;
+        }
+        .share-icons a {
+            color: #343a40; /* Dark grey */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .share-icons a:hover {
+            color: #007bff; /* Blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a class="btn-home" href="homepage.html">Home</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>New Exciting Programs</h1>
+    <p>Discover our latest academic offerings designed to prepare students for the future.</p>
+    <div class="program">
+        <h2>Program 1</h2>
+        <p>Description of Program 1...</p>
+        <div class="share-icons">
+            <a href="#" onclick="shareProgram('Program 1')"> <i class="fab fa-facebook"></i> </a>
+            <a href="#" onclick="shareProgram('Program 1')"> <i class="fab fa-twitter"></i> </a>
+            <a href="#" onclick="shareProgram('Program 1')"> <i class="fab fa-linkedin"></i> </a>
+        </div>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+    <div class="program">
+        <h2>Program 2</h2>
+        <p>Description of Program 2...</p>
+        <div class="share-icons">
+            <a href="#" onclick="shareProgram('Program 2')"> <i class="fab fa-facebook"></i> </a>
+            <a href="#" onclick="shareProgram('Program 2')"> <i class="fab fa-twitter"></i> </a>
+            <a href="#" onclick="shareProgram('Program 2')"> <i class="fab fa-linkedin"></i> </a>
+        </div>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+    <div class="program">
+        <h2>Program 3</h2>
+        <p>Description of Program 3...</p>
+        <div class="share-icons">
+            <a href="#" onclick="shareProgram('Program 3')"> <i class="fab fa-facebook"></i> </a>
+            <a href="#" onclick="shareProgram('Program 3')"> <i class="fab fa-twitter"></i> </a>
+            <a href="#" onclick="shareProgram('Program 3')"> <i class="fab fa-linkedin"></i> </a>
+        </div>
+        <button class="btn-enroll" onclick="enroll(this)">Enroll</button>
+    </div>
+    <!-- Add more programs as needed -->
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 My University. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    function enroll(button) {
+        button.classList.add('enrolled');
+        button.textContent = 'Enrolled';
+        alert('You have successfully enrolled in the program!');
+    }
+
+    function shareProgram(programName) {
+        alert('Share ' + programName + ' on social media!');
+    }
+</script>
+</body>
+</html>

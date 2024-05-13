@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'Étudiant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('hd.avif'); /* Path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            margin: 0; /* Remove default body margin */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            background-color: #007bff; /* Changed color to blue */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        header nav {
+            margin-top: 20px;
+        }
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav li {
+            margin-right: 10px;
+        }
+        header nav a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #000000;
+        }
+        main {
+            max-width: 80%; /* Adjust the percentage as needed */
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            background-color: #007bff; /* Changed color to blue */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Création d'Étudiant</h1>
+
+</header>
+<main>
+    <form th:action="@{/saveEtudiant}" method="post" th:object="${etudiant}">
+        <div id="savedEtudiantData"></div>
+
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" th:field="*{nom}" required>
+        </div>
+        <div>
+            <label for="age">Âge :</label>
+            <input type="text" id="age" name="age" th:field="*{age}" required>
+        </div>
+        <div>
+            <label for="niveau">Niveau :</label>
+            <input type="text" id="niveau" name="niveau" th:field="*{niveau}" required>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required>
+        </div>
+        <div>
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" th:field="*{adresse}" required>
+        </div>
+        <div>
+            <input type="submit" value="Save"> <!-- Changed text to "Save" -->
+        </div>
+    </form>
+</main>
+<footer>
+    <a href="EtudiantList.html">Liste des Étudiants</a>
+</footer>
+
+
+
+
+</body>
+</html>

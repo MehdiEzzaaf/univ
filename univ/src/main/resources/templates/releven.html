@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevé de Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333; /* Couleur sombre */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0; /* Reduced padding */
+        }
+        .navbar {
+            background-color: #333; /* Couleur sombre */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        footer {
+            background-color: #333; /* Couleur sombre */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a th:href="@{/homepage}" style="color: white; text-decoration: none;">Home</a>
+    </div>
+    <h2>Relevé de Notes</h2> <!-- Reduced header size -->
+    <p>Étudiant: <span th:text="${studentName}">Prénom Nom</span></p>
+    <p>Âge: <span th:text="${studentAge}">20</span></p>
+    <p>Niveau: <span th:text="${studentLevel}">Université</span></p>
+</header>
+
+<table>
+    <thead>
+    <tr>
+        <th>Matière</th>
+        <th>Note</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Python</td>
+        <td><span th:text="${pythonGrade}">15</span></td>
+    </tr>
+    <tr>
+        <td>Java</td>
+        <td><span th:text="${javaGrade}">12</span></td>
+    </tr>
+    <tr>
+        <td>Pl SQL</td>
+        <td><span th:text="${plsqlGrade}">14</span></td>
+    </tr>
+    <!-- Add more rows for other subjects and grades -->
+    </tbody>
+</table>
+
+<footer>
+    <p>&copy; <span th:text="${#dates.year()}">2024</span> Université XYZ. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

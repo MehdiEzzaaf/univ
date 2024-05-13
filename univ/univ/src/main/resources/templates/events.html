@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40; /* Dark grey */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40; /* Dark grey */
+            color: #fff; /* White */
+            text-align: center;
+            padding: 1px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .event {
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .event-content {
+            padding: 20px;
+        }
+        .event-title {
+            margin-bottom: 10px;
+            color: #007bff; /* Blue */
+            font-weight: bold;
+        }
+        .event-date {
+            color: #6c757d; /* Medium grey */
+        }
+        .event-description {
+            color: #6c757d; /* Medium grey */
+        }
+        footer {
+            background-color: #343a40; /* Dark grey */
+            color: #fff; /* White */
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        .navbar {
+            background-color: #343a40; /* Dark grey */
+        }
+        .navbar-brand {
+            color: #fff; /* White */
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #f8f9fa !important; /* Light grey */
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #F9F9F9!important; /* White */
+        }
+        .event:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .btn-register {
+            background-color: #28a745; /* Green */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn-register:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        .share-icons {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            display: flex;
+            gap: 5px;
+        }
+        .share-icons a {
+            color: #007bff; /* Blue */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .share-icons a:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Upcoming Events</h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="event">
+        <div class="event-content">
+            <h2 class="event-title">Event 1</h2>
+            <p class="event-date"><strong>Date:</strong> January 1, 2025</p>
+            <p class="event-description"><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra velit nec erat pharetra, ut volutpat felis suscipit.</p>
+            <a href="#" class="btn-register">Register</a>
+            <div class="share-icons">
+                <a href="#" onclick="shareEvent('Event 1')"> <i class="fab fa-facebook"></i> </a>
+                <a href="#" onclick="shareEvent('Event 1')"> <i class="fab fa-twitter"></i> </a>
+                <a href="#" onclick="shareEvent('Event 1')"> <i class="fab fa-linkedin"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="event">
+        <div class="event-content">
+            <h2 class="event-title">Event 2</h2>
+            <p class="event-date"><strong>Date:</strong> February 15, 2025</p>
+            <p class="event-description"><strong>Description:</strong> Integer auctor tortor in enim consectetur, nec lobortis est tempus. Morbi fringilla ultricies erat, eget commodo est vulputate id.</p>
+            <a href="#" class="btn-register">Register</a>
+            <div class="share-icons">
+                <a href="#" onclick="shareEvent('Event 2')"> <i class="fab fa-facebook"></i> </a>
+                <a href="#" onclick="shareEvent('Event 2')"> <i class="fab fa-twitter"></i> </a>
+                <a href="#" onclick="shareEvent('Event 2')"> <i class="fab fa-linkedin"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="event">
+        <div class="event-content">
+            <h2 class="event-title">Event 3</h2>
+            <p class="event-date"><strong>Date:</strong> March 30, 2025</p>
+            <p class="event-description"><strong>Description:</strong> Fusce non est vel nisi condimentum laoreet vel a dui. Phasellus ac felis a ex viverra posuere eget id mi.</p>
+            <a href="#" class="btn-register">Register</a>
+            <div class="share-icons">
+                <a href="#" onclick="shareEvent('Event 3')"> <i class="fab fa-facebook"></i> </a>
+                <a href="#" onclick="shareEvent('Event 3')"> <i class="fab fa-twitter"></i> </a>
+                <a href="#" onclick="shareEvent('Event 3')"> <i class="fab fa-linkedin"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2025 My University. All rights reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    function shareEvent(eventName) {
+        alert('Share ' + eventName + ' on social media!');
+    }
+</script>
+</body>
+</html>
